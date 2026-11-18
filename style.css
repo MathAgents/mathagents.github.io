@@ -1,8 +1,8 @@
 /* mathagents.org
    A definition and a figure, as at the start of a paper, then the schedule.
    Serif (Source Serif 4) carries the content; sans (Source Sans 3) carries
-   dates, names and navigation. Yellow marks what to look at: the term being
-   defined, and the next workshop. */
+   dates, names and navigation. Yellow marks what to look at: the next
+   workshop (and, in dark mode, the term being defined). */
 
 /* ---------- Fonts (self-hosted, SIL Open Font License: fonts/OFL.txt) ---------- */
 
@@ -64,8 +64,7 @@
   --yellow: #f4cf58;      /* highlighter */
   --yellow-ink: #2b2204;  /* text on yellow */
   --blue: #3f7fd6;        /* the second agent in the figure */
-  --term-ink: inherit;    /* the defined term: highlighted in light mode... */
-  --term-band: var(--yellow);
+  --term-ink: inherit;    /* the defined term: plain italic in light mode... */
 
   --paper: #fbfcfa;
   --ink: #17211e;
@@ -89,7 +88,6 @@
     --yellow: #f2d06b;
     --blue: #86b7f2;
     --term-ink: var(--yellow);  /* ...and written in yellow in dark mode */
-    --term-band: transparent;
 
     --paper: #111917;
     --ink: #e4e9e5;
@@ -219,9 +217,7 @@ cite { font-style: italic; }
 .definition strong { font-weight: 700; }
 .definition em {
   color: var(--term-ink);
-  background: linear-gradient(transparent 60%, var(--term-band) 60%, var(--term-band) 93%, transparent 93%);
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
+  white-space: nowrap;  /* keep the term on one line */
 }
 
 .fig { margin: 0; max-width: 18rem; }
