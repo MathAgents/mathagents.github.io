@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MathAgents: workshops on doing mathematics with AI agents</title>
+  <meta name="description" content="MathAgents workshops are days in which mathematicians do mathematics with AI agents. Upcoming and past workshops, and the open-source software they run on.">
+  <link rel="canonical" href="https://mathagents.org/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mathagents.org/">
+  <meta property="og:title" content="MathAgents: workshops on doing mathematics with AI agents">
+  <meta property="og:description" content="Days in which mathematicians do mathematics with AI agents, alongside colleagues doing the same.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#dcebe2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1f3a33" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/source-serif-4-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/source-sans-3-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#workshops">Skip to the workshops</a>
+
+  <header class="hero">
+    <div class="wrap">
+      <nav class="top" aria-label="Site">
+        <h1 class="wordmark"><a href="./"><svg class="mark" viewBox="0 0 30 24" aria-hidden="true" focusable="false"><path class="fig-own" d="M10 14L22 5M10 14L25 18"/><circle class="fig-a" cx="22" cy="5" r="3.5"/><circle class="fig-b" cx="25" cy="18" r="3.5"/><circle class="fig-person" cx="10" cy="14" r="6.5"/></svg>MathAgents</a></h1>
+        <ul>
+          <li><a href="#workshops">Workshops</a></li>
+          <li><a href="#software">Software</a></li>
+          <li><a href="https://github.com/MathAgents">GitHub</a></li>
+        </ul>
+      </nav>
+
+      <div class="lede">
+        <p class="definition"><strong>Definition.</strong> A <em>MathAgents workshop</em> is a day (or two) in which mathematicians do mathematics with AI agents, alongside colleagues doing the same.</p>
+        <figure class="fig">
+          <svg viewBox="22 20 356 360" aria-hidden="true" focusable="false">
+            <path class="fig-talk" d="M200 88L287.6 130.2 M200 88L309.2 224.9 M200 88L248.6 300.9 M200 88L151.4 300.9 M200 88L90.8 224.9 M200 88L112.4 130.2 M287.6 130.2L309.2 224.9 M287.6 130.2L248.6 300.9 M287.6 130.2L151.4 300.9 M287.6 130.2L90.8 224.9 M287.6 130.2L112.4 130.2 M309.2 224.9L248.6 300.9 M309.2 224.9L151.4 300.9 M309.2 224.9L90.8 224.9 M309.2 224.9L112.4 130.2 M248.6 300.9L151.4 300.9 M248.6 300.9L90.8 224.9 M248.6 300.9L112.4 130.2 M151.4 300.9L90.8 224.9 M151.4 300.9L112.4 130.2 M90.8 224.9L112.4 130.2"/>
+            <path class="fig-own" d="M200 88L164.6 37.8M200 88L235.4 37.8 M287.6 130.2L304.7 71.2M287.6 130.2L348.9 126.6 M309.2 224.9L366 201.6M309.2 224.9L350.2 270.6 M248.6 300.9L302.3 330.8M248.6 300.9L238.5 361.5 M151.4 300.9L161.5 361.5M151.4 300.9L97.7 330.8 M90.8 224.9L49.8 270.6M90.8 224.9L34 201.6 M112.4 130.2L51.1 126.6M112.4 130.2L95.3 71.2"/>
+            <g class="fig-a"><circle cx="164.6" cy="37.8" r="7.5"/><circle cx="304.7" cy="71.2" r="7.5"/><circle cx="366" cy="201.6" r="7.5"/><circle cx="302.3" cy="330.8" r="7.5"/><circle cx="161.5" cy="361.5" r="7.5"/><circle cx="49.8" cy="270.6" r="7.5"/><circle cx="51.1" cy="126.6" r="7.5"/></g>
+            <g class="fig-b"><circle cx="235.4" cy="37.8" r="7.5"/><circle cx="348.9" cy="126.6" r="7.5"/><circle cx="350.2" cy="270.6" r="7.5"/><circle cx="238.5" cy="361.5" r="7.5"/><circle cx="97.7" cy="330.8" r="7.5"/><circle cx="34" cy="201.6" r="7.5"/><circle cx="95.3" cy="71.2" r="7.5"/></g>
+            <g class="fig-person"><circle cx="200" cy="88" r="11.5"/><circle cx="287.6" cy="130.2" r="11.5"/><circle cx="309.2" cy="224.9" r="11.5"/><circle cx="248.6" cy="300.9" r="11.5"/><circle cx="151.4" cy="300.9" r="11.5"/><circle cx="90.8" cy="224.9" r="11.5"/><circle cx="112.4" cy="130.2" r="11.5"/></g>
+          </svg>
+          <figcaption><b>Figure 1.</b> A workshop: seven mathematicians, each with two agents.</figcaption>
+        </figure>
+      </div>
+
+      <div class="about">
+        <p>At a workshop you get a cloud machine of your own, running OpenAI Codex and Claude Code, with Lean and Mathlib, PARI/GP, GAP, Oscar, Macaulay2 and other mathematical software installed. You talk to your agents in Zulip, the workshop&rsquo;s shared chat, where each topic is one conversation with them. Everything happens there, so you don&rsquo;t need a terminal.</p>
+        <p>You can also bring colleagues and their agents into a conversation: each agent answers only its own mathematician, but reads what everyone says. The workshops are designed for mathematicians who have not used AI seriously, for those who have only used a chat window in a browser, and for those who already work with Codex or Claude Code.</p>
+      </div>
+    </div>
+  </header>
+
+  <main id="workshops">
+
+    <!--
+      To add a workshop, copy one <li class="event"> block into the "Upcoming" list,
+      in date order, and edit it. data-starts and data-ends are YYYY-MM-DD.
+      The script at the bottom of this page moves a workshop to "Past" on the day
+      after data-ends, and labels the earliest upcoming one "Next".
+    -->
+
+    <section class="wrap" aria-labelledby="upcoming">
+      <h2 id="upcoming">Upcoming workshops</h2>
+      <ol class="events" id="upcoming-list" role="list">
+
+        <li class="event next" data-starts="2026-11-21" data-ends="2026-11-21">
+          <p class="when"><time datetime="2026-11-21">November 21, 2026</time> <span>Saturday</span></p>
+          <div class="what">
+            <h3>Cambridge, MA</h3>
+            <p><a href="https://cmsa.fas.harvard.edu/event/mathai_112126/"><cite>Doing Mathematics with AI Agents</cite></a> at Harvard University, for postdocs in the Boston area.</p>
+          </div>
+          <p class="who">Organized by Melanie Matchett Wood, Andrew Sutherland, Saman Habibi Esfahani and Michał Szachniewicz</p>
+        </li>
+
+        <li class="event" data-starts="2026-12-09" data-ends="2026-12-09">
+          <p class="when"><time datetime="2026-12-09">December 9, 2026</time> <span>Wednesday</span></p>
+          <div class="what">
+            <h3>Providence, RI</h3>
+            <p>At <abbr title="Institute for Computational and Experimental Research in Mathematics">ICERM</abbr>. Details to be announced.</p>
+          </div>
+          <p class="who">Organized by Brendan Hassett, Melanie Matchett Wood and Andrew Sutherland</p>
+        </li>
+
+        <li class="event" data-starts="2026-12-14" data-ends="2026-12-14">
+          <p class="when"><time datetime="2026-12-14">December 14, 2026</time> <span>Monday</span></p>
+          <div class="what">
+            <h3>Pittsburgh, PA</h3>
+            <p><a href="https://icarm.io/events/2026/doing-mathematics-with-ai-agents/"><cite>Doing Mathematics with AI Agents</cite></a> at <abbr title="Institute for Computer-Aided Reasoning in Mathematics">ICARM</abbr>, for faculty and postdocs in the Pittsburgh area.</p>
+          </div>
+          <p class="who">Organized by Melanie Matchett Wood and Andrew Sutherland</p>
+        </li>
+
+        <li class="event" data-starts="2027-01-10" data-ends="2027-01-10">
+          <p class="when"><time datetime="2027-01-10">January 10, 2027</time> <span>Sunday</span></p>
+          <div class="what">
+            <h3>Chicago, IL</h3>
+            <p><a href="https://www.nitmb.org/event/doing-mathematics-with-ai-agents/"><cite>Doing Mathematics with AI Agents</cite></a> at <abbr title="NSF-Simons National Institute for Theory and Mathematics in Biology">NITMB</abbr>, for mathematicians in the Chicago area.</p>
+          </div>
+          <p class="who">Organized by Antonio Auffinger, Bryna Kra and Andrew Sutherland</p>
+        </li>
+
+      </ol>
+      <p class="none" id="no-upcoming" hidden>No workshops are scheduled right now.</p>
+    </section>
+
+    <section class="wrap" aria-labelledby="past">
+      <h2 id="past">Past workshops</h2>
+      <ul class="events" id="past-list" role="list">
+
+        <li class="event" data-starts="2026-10-31" data-ends="2026-10-31">
+          <p class="when"><time datetime="2026-10-31">October 31, 2026</time> <span>Saturday</span></p>
+          <div class="what">
+            <h3>Cambridge, MA</h3>
+            <p><a href="https://cmsa.fas.harvard.edu/event/mathai_103126/"><cite>Doing Mathematics with AI Agents</cite></a> at Harvard University, for faculty in the Boston area.</p>
+          </div>
+          <p class="who">Organized by Melanie Matchett Wood and Andrew Sutherland</p>
+        </li>
+
+        <li class="event" data-starts="2026-10-09" data-ends="2026-10-10">
+          <p class="when"><time datetime="2026-10-09">October 9&ndash;10, 2026</time> <span>Friday and Saturday</span></p>
+          <div class="what">
+            <h3>San Francisco, CA</h3>
+            <p><a href="https://alexamclain.com/overhang/"><cite>The Overhang</cite></a>, an invitation-only workshop for number theorists and researchers from industry.</p>
+          </div>
+          <p class="who">Organized by Alexa McLain and Andrew Sutherland</p>
+        </li>
+
+      </ul>
+    </section>
+
+    <section class="wrap software" aria-labelledby="software">
+      <h2 id="software">Software</h2>
+      <p>The workshops run on <a href="https://github.com/MathAgents/zulip-agent-bridge">zab, the Zulip Agent Bridge</a>, which lets you drive Codex and Claude Code from Zulip: a channel is a project, and a topic is one agent session. It is open source under the MIT license, and you can run it on your own laptop, workstation or server, without a workshop.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Maintained by <a href="https://math.mit.edu/~drew/">Andrew Sutherland</a>. Find MathAgents on <a href="https://github.com/MathAgents">GitHub</a>.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Keep the two lists current without editing the page: a workshop moves to
+    // "Past" on the day after it ends, and the earliest upcoming date is "Next".
+    (function () {
+      var d = new Date();
+      var today = d.getFullYear() + "-" +
+        String(d.getMonth() + 1).padStart(2, "0") + "-" +
+        String(d.getDate()).padStart(2, "0");
+      var upcoming = document.getElementById("upcoming-list");
+      var past = document.getElementById("past-list");
+      var items = Array.prototype.slice.call(upcoming.children);
+
+      items.forEach(function (li) {
+        li.classList.remove("next");
+        if (li.dataset.ends < today) past.insertBefore(li, past.firstChild);
+      });
+
+      var first = upcoming.firstElementChild;
+      if (!first) {
+        upcoming.hidden = true;
+        document.getElementById("no-upcoming").hidden = false;
+        return;
+      }
+      Array.prototype.forEach.call(upcoming.children, function (li) {
+        if (li.dataset.starts === first.dataset.starts) li.classList.add("next");
+      });
+    })();
+  </script>
+</body>
+</html>
