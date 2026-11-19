@@ -329,7 +329,20 @@ h2 {
   .who { grid-column: 3; padding-top: 0.3rem; }
 }
 
-.software p { margin: 0; max-width: 40rem; }
+.software p, .plans p { margin: 0; max-width: 40rem; }
+
+.people {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 2.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width: 34rem) {
+  .top ul { gap: 1.25rem; }
+}
 
 /* ---------- Footer ---------- */
 
